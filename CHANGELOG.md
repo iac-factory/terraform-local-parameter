@@ -1,5 +1,11 @@
 # Changelog #
 
+## `2.1.1` ##
+
+**Chore**: Refactored variable names for better understanding
+
+**Bugfix**: Fixed runtime logic error when determining to apply a casing to the `Name` key-value assignment
+
 ## `2.0.1` ##
 
 **Chore**: Removed `ci` directory + `.gitlab-ci.yml` configuration in favor of the [Terraform Registry](https://registry.terraform.io/modules/iac-factory/parameter/local/2.0.0)
