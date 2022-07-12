@@ -7,6 +7,7 @@
 ## `2.1.4` ##
 
 **Documentation**: Generation
+
 **Bug**: Added `.` to end of error validation messages
 
 ## `2.1.3` ##
