@@ -1,5 +1,9 @@
 # Changelog #
 
+## `2.1.5` ##
+
+**Documentation**: Generation
+
 ## `2.1.4` ##
 
 **Documentation**: Generation
