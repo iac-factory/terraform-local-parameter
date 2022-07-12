@@ -34,7 +34,11 @@
 
 
 ---
+
 ## Documentation ##
+
+<details>
+<summary> ⓘ View (Drop-Down) </summary>
 
 Documentation is both programmatically and conventionally generated.
 
@@ -45,7 +49,7 @@ a new commit, ensure to run the following:
 git commit -a --message "..."
 ```
 
-If a commit shows as a **Failure**, ***such is the job of the pre-commit hook***. 
+If a commit shows as a **Failure**, ***such is the job of the pre-commit hook***.
 Simply re-commit and then the repository should be able to be pushed to.
 
 ### Generating `tfvars` & `tfvars.json` ###
@@ -79,25 +83,27 @@ Documentation is often a second thought; refer to the following steps to ensure 
 upon `git commit`.
 
 1. Install Pre-Commit
-    ```bash
-    brew install pre-commit || pip install pre-commit
-    ```
+```bash
+brew install pre-commit || pip install pre-commit
+```
 2. Check Installation + Version
-    ```bash
-    pre-commit --version
-    ```
+```bash
+pre-commit --version
+```
 3. Generate Configuration (`.pre-commit-config.yaml`)
 4. Configure `git` hooks
-    ```bash
-    pre-commit install
-    pre-commit install-hooks
-    ```
-    - If any errors show:
-        ```bash
-        git config --unset-all core.hooksPath
-        ```
+```bash
+pre-commit install
+pre-commit install-hooks
+```
+- If any errors show:
+```bash
+git config --unset-all core.hooksPath
+```
 
 **Most Importantly**
 
 > *`pre-commit install` should always be the first command after a project is cloned.*
+
+
 <!-- END_TF_DOCS -->
