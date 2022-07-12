@@ -20,7 +20,7 @@
 | <a name="input_tf"></a> [tf](#input_tf) | Non-ID Element - Tag Setter | `string` | `"True"` | no |
 | <a name="input_value-casing"></a> [value-casing](#input_value-casing) | n/a | `map(string)` | <pre>{<br>  "application": "title",<br>  "environment": "title",<br>  "identifier": "title",<br>  "name": "none",<br>  "namespace": "title",<br>  "service": "title",<br>  "tf": "title"<br>}</pre> | no |
 
----
+
 
 ## Documentation ##
 

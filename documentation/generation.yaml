@@ -25,7 +25,7 @@ content: |-
 
     {{ .Inputs }}
     
-    ---
+    {{ .Outputs }}
     
     {{ include "documentation/documentation.md" }}
 
