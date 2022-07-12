@@ -36,18 +36,6 @@ variable "environment" {
         condition     = var.environment != null
         error_message = "Environment != null"
     }
-
-    // validation {
-    //     condition = contains([
-    //         "Development",
-    //         "QA",
-    //         "Staging",
-    //         "UAT",
-    //         "Pre-Production",
-    //         "Production"
-    //     ], var.environment)
-    //     error_message = "Allowed Values: \"Development\" | \"QA\" | \"Staging\" | \"UAT\" | \"Pre-Production\" | \"Production\"."
-    // }
 }
 
 variable "service" {
@@ -116,16 +104,6 @@ variable "casings" {
         error_message = "[Application] Allowed values: `lower`, `title`, `upper`, `none`."
     }
 
-//    validation {
-//        condition = var.casings.tf == null ? true : contains([
-//            "lower",
-//            "title",
-//            "upper",
-//            "none"
-//        ], var.casings.tf)
-//        error_message = "[TF] Allowed values: `lower`, `title`, `upper`, `none`."
-//    }
-
     validation {
         condition = var.casings.environment == null ? true : contains([
             "lower",
@@ -155,26 +133,6 @@ variable "casings" {
         ], var.casings.service)
         error_message = "[Service] Allowed values: `lower`, `title`, `upper`, `none`."
     }
-
-//    validation {
-//        condition = var.casings.identifier == null ? true : contains([
-//            "lower",
-//            "title",
-//            "upper",
-//            "none"
-//        ], var.casings.identifier)
-//        error_message = "[Identifier] Allowed values: `lower`, `title`, `upper`, `none`."
-//    }
-
-//    validation {
-//        condition = var.casings.name == null ? true : contains([
-//            "lower",
-//            "title",
-//            "upper",
-//            "none"
-//        ], var.casings.name)
-//        error_message = "[Name] Allowed values: `lower`, `title`, `upper`, `none`."
-//    }
 }
 
 variable "key-casing" {

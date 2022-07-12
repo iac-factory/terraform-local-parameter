@@ -1,0 +1,64 @@
+# # see: https://terraform-docs.io/user-guide/configuration/version
+# version: ">= 0.10, < 0.12"
+
+# see: https://terraform-docs.io/user-guide/configuration/formatter
+formatter: markdown table
+
+# see: https://terraform-docs.io/user-guide/configuration/header-from
+header-from: documentation/header.md
+
+# see: https://terraform-docs.io/user-guide/configuration/footer-from
+# footer-from: documentation/footer.md
+
+# see: https://terraform-docs.io/user-guide/configuration/recursive
+recursive:
+    enabled: false
+    path: modules
+
+# see: https://terraform-docs.io/user-guide/configuration/sections
+sections:
+    show:
+        - header
+        - inputs
+        - footer
+
+# # see: https://terraform-docs.io/user-guide/configuration/content
+content: |-
+    {{ .Header }}
+
+    {{ .Inputs }}
+    
+    #### Outputs ####
+
+    ```bash
+    terraform output --json > output.json
+    ```
+    
+    Results in the following:
+    
+    ```json
+    {{ include "documentation/output.json" }}
+    ```
+    
+    ---
+    
+    {{ include "documentation/documentation.md" }}
+
+# # see: https://terraform-docs.io/user-guide/configuration/output
+output:
+    file: README.md
+    mode: inject
+
+# see: https://terraform-docs.io/user-guide/configuration/sort
+sort:
+    enabled: true
+    by: required
+
+# see: https://terraform-docs.io/user-guide/configuration/settings
+settings:
+    indent: 4
+    escape: false
+    default: true
+    required: true
+    type: true
+

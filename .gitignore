@@ -48,7 +48,6 @@ cdktf.out/**
 *.zip
 
 coverage
-documentation
 
 *.tsbuildinfo
 tsconfig.tsbuildinfo
