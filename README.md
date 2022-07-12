@@ -1,5 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 # terraform-local-parameter #
+
+*Anything with a `ⓘ` is a dropdown containing additional, contextual information.*
 #### Inputs
 
 | Name | Description | Type | Default | Required |
