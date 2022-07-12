@@ -30,7 +30,6 @@ content: |-
     {{ .Providers }}
     {{ .Requirements }}
     {{ .Resources }}
-    ---
     {{ include "documentation/documentation.md" }}
 
 # # see: https://terraform-docs.io/user-guide/configuration/output
