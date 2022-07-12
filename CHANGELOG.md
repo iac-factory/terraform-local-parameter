@@ -1,6 +1,6 @@
 # Changelog #
 
-## `2.1.1` ##
+## `2.1.3` ##
 
 **Chore**: Refactored variable names for better understanding
 
