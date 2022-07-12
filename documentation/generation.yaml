@@ -2,32 +2,33 @@
 formatter: markdown table
 
 # see: https://terraform-docs.io/user-guide/configuration/header-from
-header-from: documentation/header.md
+# header-from: documentation/header.md
 
-# see: https://terraform-docs.io/user-guide/configuration/footer-from
-# footer-from: documentation/footer.md
+header-from: ./documentation/documentation.md
+footer-from: ""
 
-# see: https://terraform-docs.io/user-guide/configuration/recursive
 recursive:
     enabled: false
-    path: modules
+    path: .
 
 # see: https://terraform-docs.io/user-guide/configuration/sections
 sections:
+    hide: []
     show:
         - header
+        - requirements
         - inputs
+        - modules
+        - data-sources
+        - resources
         - outputs
-        - footer
 
 # # see: https://terraform-docs.io/user-guide/configuration/content
 content: |-
     {{ .Header }}
-    {{ .Footer }}
     {{ .Inputs }}
     {{ .Modules }}
     {{ .Outputs }}
-    {{ .Providers }}
     {{ .Requirements }}
     {{ .Resources }}
     {{ include "documentation/documentation.md" }}
@@ -44,9 +45,16 @@ sort:
 
 # see: https://terraform-docs.io/user-guide/configuration/settings
 settings:
-    indent: 4
-    escape: false
+    anchor: true
+    color: true
     default: true
+    description: true
+    escape: false
+    hide-empty: true
+    html: true
+    indent: 4
+    lockfile: true
+    read-comments: true
     required: true
+    sensitive: true
     type: true
-
