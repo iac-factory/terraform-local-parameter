@@ -34,7 +34,7 @@ variable "environment" {
 
     validation {
         condition     = var.environment != null
-        error_message = "Environment != null"
+        error_message = "Environment != null."
     }
 }
 
@@ -44,7 +44,7 @@ variable "service" {
 
     validation {
         condition     = var.service != null
-        error_message = "Service != null"
+        error_message = "Service != null."
     }
 }
 
@@ -54,7 +54,7 @@ variable "application" {
 
     validation {
         condition     = var.application != null
-        error_message = "Application != null"
+        error_message = "Application != null."
     }
 }
 
@@ -71,7 +71,7 @@ variable "separator" {
 
     validation {
         condition     = var.separator != null
-        error_message = "Separator != null"
+        error_message = "Separator != null."
     }
 }
 

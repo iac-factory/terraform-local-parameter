@@ -1,5 +1,10 @@
 # Changelog #
 
+## `2.1.4` ##
+
+**Bug**: Added `.` to end of error validation messages
+
+
 ## `2.1.3` ##
 
 **Chore**: Refactored variable names for better understanding
