@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-# `terraform-local-parameter` #
+# terraform-local-parameter #
 
 #### Inputs
 
