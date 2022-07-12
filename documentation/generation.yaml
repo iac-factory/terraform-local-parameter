@@ -20,6 +20,7 @@ sections:
         - data-sources
         - resources
         - outputs
+        - footer
 
 # # see: https://terraform-docs.io/user-guide/configuration/content
 content: |-
