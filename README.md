@@ -20,8 +20,22 @@
 | <a name="input_tf"></a> [tf](#input_tf) | Non-ID Element - Tag Setter | `string` | `"True"` | no |
 | <a name="input_value-casing"></a> [value-casing](#input_value-casing) | n/a | `map(string)` | <pre>{<br>  "application": "title",<br>  "environment": "title",<br>  "identifier": "title",<br>  "name": "none",<br>  "namespace": "title",<br>  "service": "title",<br>  "tf": "title"<br>}</pre> | no |
 
+#### Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_application"></a> [application](#output_application) | n/a |
+| <a name="output_environment"></a> [environment](#output_environment) | n/a |
+| <a name="output_identifier"></a> [identifier](#output_identifier) | n/a |
+| <a name="output_input"></a> [input](#output_input) | n/a |
+| <a name="output_name"></a> [name](#output_name) | n/a |
+| <a name="output_namespace"></a> [namespace](#output_namespace) | n/a |
+| <a name="output_service"></a> [service](#output_service) | n/a |
+| <a name="output_tags"></a> [tags](#output_tags) | n/a |
 
 
+
+---
 ## Documentation ##
 
 Documentation is both programmatically and conventionally generated.
