@@ -105,6 +105,8 @@ git config --unset-all core.hooksPath
 
 > *`pre-commit install` should always be the first command after a project is cloned.*
 
+</details>
+
 ## References ##
 
 Regardless of involvements with the project, please acknowledge

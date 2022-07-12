@@ -101,6 +101,8 @@ content: |-
     **Most Importantly**
 
     > *`pre-commit install` should always be the first command after a project is cloned.*
+    
+    </details>
   
     {{ .Footer }}
 
