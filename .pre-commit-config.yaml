@@ -3,8 +3,8 @@ repos:
         repo: local
         hooks:
             -
-                id: header
-                name: File Permissions
+                id: helper
+                name: Helper
                 always_run: true
                 entry: ./documentation/helper.sh
                 language: script

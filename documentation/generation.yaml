@@ -1,6 +1,3 @@
-# # see: https://terraform-docs.io/user-guide/configuration/version
-# version: ">= 0.10, < 0.12"
-
 # see: https://terraform-docs.io/user-guide/configuration/formatter
 formatter: markdown table
 
@@ -27,18 +24,6 @@ content: |-
     {{ .Header }}
 
     {{ .Inputs }}
-    
-    #### Outputs ####
-
-    ```bash
-    terraform output --json > output.json
-    ```
-    
-    Results in the following:
-    
-    ```json
-    {{ include "documentation/output.json" }}
-    ```
     
     ---
     
