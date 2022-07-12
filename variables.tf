@@ -30,7 +30,7 @@ variable "namespace" {
 variable "environment" {
     type        = string
     default     = "Development"
-    description = "ID Element - \"Development\" | \"QA\" | \"Staging\" | \"UAT\" | \"Pre-Production\" | \"Production\""
+    description = "ID Element - `Development`, `QA`, `Staging`, `UAT`, `Pre-Production`, `Production`"
 
     validation {
         condition     = var.environment != null
@@ -40,7 +40,7 @@ variable "environment" {
 
 variable "service" {
     type        = string
-    description = "ID Element - Service(s) either Consumed or Provided i.e. \"EC2\", \"Custom-Microservice-Name\", \"K8s\""
+    description = "ID Element - Service(s) either Consumed or Provided i.e. EC2, Custom-Microservice-Name, K8s"
 
     validation {
         condition     = var.service != null
@@ -81,7 +81,61 @@ variable "tags" {
     description = "Additional Tags (e.g. `{'Business-Unit': 'XYZ'}`); Will Overwrite Other Keys Depending on Other Inputs + Tag Keys"
 }
 
-variable "casings" {
+variable "key-casing" {
+    type = map(string)
+
+    default = {
+        tf = "upper"
+        namespace = "title"
+        environment = "title"
+        service = "title"
+        application = "title"
+        identifier = "title"
+        name = "none"
+    }
+
+    validation {
+        condition = var.key-casing.application == null ? true : contains([
+            "lower",
+            "title",
+            "upper",
+            "none"
+        ], var.key-casing.application)
+        error_message = "[Application] Allowed values: `lower`, `title`, `upper`, `none`."
+    }
+
+    validation {
+        condition = var.key-casing.environment == null ? true : contains([
+            "lower",
+            "title",
+            "upper",
+            "none"
+        ], var.key-casing.environment)
+        error_message = "[Environment] Allowed values: `lower`, `title`, `upper`, `none`."
+    }
+
+    validation {
+        condition = var.key-casing.namespace == null ? true : contains([
+            "lower",
+            "title",
+            "upper",
+            "none"
+        ], var.key-casing.namespace)
+        error_message = "[Namespace] Allowed values: `lower`, `title`, `upper`, `none`."
+    }
+
+    validation {
+        condition = var.key-casing.service == null ? true : contains([
+            "lower",
+            "title",
+            "upper",
+            "none"
+        ], var.key-casing.service)
+        error_message = "[Service] Allowed values: `lower`, `title`, `upper`, `none`."
+    }
+}
+
+variable "value-casing" {
     type = map(string)
 
     default = {
@@ -95,72 +149,58 @@ variable "casings" {
     }
 
     validation {
-        condition = var.casings.application == null ? true : contains([
+        condition = var.value-casing.application == null ? true : contains([
             "lower",
             "title",
             "upper",
             "none"
-        ], var.casings.application)
+        ], var.value-casing.application)
         error_message = "[Application] Allowed values: `lower`, `title`, `upper`, `none`."
     }
 
     validation {
-        condition = var.casings.environment == null ? true : contains([
+        condition = var.value-casing.environment == null ? true : contains([
             "lower",
             "title",
             "upper",
             "none"
-        ], var.casings.environment)
+        ], var.value-casing.environment)
         error_message = "[Environment] Allowed values: `lower`, `title`, `upper`, `none`."
     }
 
     validation {
-        condition = var.casings.namespace == null ? true : contains([
+        condition = var.value-casing.namespace == null ? true : contains([
             "lower",
             "title",
             "upper",
             "none"
-        ], var.casings.namespace)
+        ], var.value-casing.namespace)
         error_message = "[Namespace] Allowed values: `lower`, `title`, `upper`, `none`."
     }
 
     validation {
-        condition = var.casings.service == null ? true : contains([
+        condition = var.value-casing.service == null ? true : contains([
             "lower",
             "title",
             "upper",
             "none"
-        ], var.casings.service)
+        ], var.value-casing.service)
         error_message = "[Service] Allowed values: `lower`, `title`, `upper`, `none`."
     }
 }
 
-variable "key-casing" {
+variable "casing" {
     type = string
     default = "none"
+    description = "A Short-Circuit for the `Name` Tag Partial (Value) of the Parameter"
 
     validation {
-        condition = var.key-casing == null ? true : contains([
+        condition = var.casing == null ? true : contains([
             "lower",
             "title",
             "upper",
             "none"
-        ], var.key-casing)
-        error_message = "Allowed values: `lower`, `title`, `upper`, `none`."
-    }
-}
-
-variable "value-casing" {
-    type = string
-    default = "none"
-
-    validation {
-        condition = var.value-casing == null ? true : contains([
-            "lower",
-            "title",
-            "upper",
-            "none"
-        ], var.value-casing)
+        ], var.casing)
         error_message = "Allowed values: `lower`, `title`, `upper`, `none`."
     }
 }

@@ -36,6 +36,10 @@ output "input" {
         application = var.application
         separator = var.separator
         tags = var.tags
-        casings = var.casings
+        casings = {
+            key = var.key-casing
+            value = var.value-casing
+            short-circuit = var.casing
+        }
     }
 }
