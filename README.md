@@ -84,7 +84,9 @@ upon `git commit`.
 | <a name="input_tags"></a> [tags](#input_tags) | Additional Tags (e.g. `{'Business-Unit': 'XYZ'}`); Will Overwrite Other Keys Depending on Other Inputs + Tag Keys | `map(string)` | `{}` | no |
 | <a name="input_tf"></a> [tf](#input_tf) | Non-ID Element - Tag Setter | `string` | `"True"` | no |
 | <a name="input_value-casing"></a> [value-casing](#input_value-casing) | n/a | `map(string)` | <pre>{<br>  "application": "title",<br>  "environment": "title",<br>  "identifier": "title",<br>  "name": "none",<br>  "namespace": "title",<br>  "service": "title",<br>  "tf": "title"<br>}</pre> | no |
+#### Modules
 
+No modules.
 #### Outputs
 
 | Name | Description |
@@ -97,8 +99,12 @@ upon `git commit`.
 | <a name="output_namespace"></a> [namespace](#output_namespace) | n/a |
 | <a name="output_service"></a> [service](#output_service) | n/a |
 | <a name="output_tags"></a> [tags](#output_tags) | n/a |
+#### Requirements
 
+No requirements.
+#### Resources
 
+No resources.
 ---
 ## Documentation ##
 
